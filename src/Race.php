@@ -87,26 +87,6 @@ class Race {
                 }
             }
         }
-
-        for($i = 1; $i <= count($this->laps);$i++) {
-            if($i == 1) {
-                $lastLapPosition = $this->getDriverGridPosition($driver);
-            } else {
-                $lastLapData = $this->getDriverLapData($driver, $i - 1);
-                $lastLapPosition = $lastLapData->getPosition();
-            }
-            $thisLapData = $this->getDriverLapData($driver, $i);
-
-            if($thisLapData) {
-                $positionDiff = $thisLapData->getPosition() - $lastLapPosition;
-                if($positionDiff < 0) {
-                    echo "OVERTAKE " . -$positionDiff . " CARS ON LAP " . $i . " <br />";
-                }
-            } else {
-                echo "RACE OVER";
-            }
-        }
-        exit;
     }
 
 }
