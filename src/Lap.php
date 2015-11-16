@@ -10,6 +10,24 @@ class Lap {
         }
     }
 
+    public function getNumber () {
+        return $this->number;
+    }
+
+    public function getTimings () {
+        return $this->timings;
+    }
+
+    public function getDriverData ($driverName) {
+        /** @var Timing $timing */
+        foreach($this->timings as $timing) {
+            if($timing->getDriver() == $driverName) {
+                return $timing;
+            }
+        }
+        return false;
+    }
+
     public function fromXML (\SimpleXMLElement $xml) {
         $this->number = (int) $xml['number'];
         $this->timings = array();

@@ -9,6 +9,7 @@ class Race {
     private $dateTime;
     private $laps;
     private $pitStops;
+    private $qualiResults;
 
     public function __construct ($xml = false) {
         if($xml) {
@@ -36,8 +37,76 @@ class Race {
         }
     }
 
-    public function checkForOvertakes () {
+    public function loadQualiFromXML (\SimpleXMLElement $xml) {
+        $this->qualiResults = array();
+        foreach($xml->QualifyingResult as $qualiResult) {
+            $this->qualiResults[] = new QualiResult($qualiResult);
+        }
+    }
 
+    public function getDriverLapData ($driverName, $lapNo) {
+        /** @var Lap $lap */
+        foreach($this->laps as $lap) {
+            if($lap->getNumber() == $lapNo) {
+                return $lap->getDriverData($driverName);
+            }
+        }
+        return false;
+    }
+
+    /** @return Timing */
+    public function getDriverGridPosition($driverName) {
+        /** @var QualiResult $qualiResult */
+        foreach($this->qualiResults as $qualiResult) {
+            if($qualiResult->getDriver() == $driverName) {
+                return $qualiResult->getPosition();
+            }
+        }
+        return false;
+    }
+
+    public function checkForOvertakes () {
+        $driverList = array ();
+        /** @var QualiResult $qualiResult */
+        foreach($this->qualiResults as $qualiResult) {
+            $driverList[$qualiResult->getDriver()] = $qualiResult->getPosition();
+        }
+
+
+        for($i = 1; $i <= count($this->laps);$i++) {
+            foreach($driverList as $driver => $lastPosition) {
+                $lastLapPosition = $lastPosition;
+                $thisLapData = $this->getDriverLapData($driver, $i);
+
+                if($thisLapData) {
+                    $positionDiff = $thisLapData->getPosition() - $lastLapPosition;
+                    if($positionDiff < 0) {
+                        echo $driver . " overtakes " . -$positionDiff . " cars on lap " . $i . " <br />";
+                    }
+                    $driverList[$driver] = $thisLapData->getPosition();
+                }
+            }
+        }
+
+        for($i = 1; $i <= count($this->laps);$i++) {
+            if($i == 1) {
+                $lastLapPosition = $this->getDriverGridPosition($driver);
+            } else {
+                $lastLapData = $this->getDriverLapData($driver, $i - 1);
+                $lastLapPosition = $lastLapData->getPosition();
+            }
+            $thisLapData = $this->getDriverLapData($driver, $i);
+
+            if($thisLapData) {
+                $positionDiff = $thisLapData->getPosition() - $lastLapPosition;
+                if($positionDiff < 0) {
+                    echo "OVERTAKE " . -$positionDiff . " CARS ON LAP " . $i . " <br />";
+                }
+            } else {
+                echo "RACE OVER";
+            }
+        }
+        exit;
     }
 
 }
