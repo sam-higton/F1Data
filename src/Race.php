@@ -29,4 +29,15 @@ class Race {
 
     }
 
+    public function loadPitStopsFromXML (\SimpleXMLElement $xml) {
+        $this->pitStops = array ();
+        foreach($xml->PitStop as $pitStop) {
+            $this->pitStops[] = new PitStop($pitStop);
+        }
+    }
+
+    public function checkForOvertakes () {
+
+    }
+
 }
