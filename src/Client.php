@@ -3,15 +3,12 @@ namespace F1Data;
 class Client {
     private $httpClient;
 
-    public function __construct () {
-        $this->httpClient = new \GuzzleHttp\Client([
-            "base_uri" => "http://ergast.com/api/f1/"
-        ]);
+    public function __construct (HttpAdapter\HttpAdapterInterface $httpAdapter) {
+        $this->httpClient = $httpAdapter;
     }
 
     public function getRace($season = 2010,$roundNo = 1) {
-        $response = $this->httpClient->get($season . '/' . $roundNo . '/laps?limit=2000');
-        $responseXML = $this->toXMLObject($response);
+        $responseXML = $this->httpClient->get($season . '/' . $roundNo . '/laps?limit=2000');
         $race = $this->formatRace($responseXML->RaceTable->Race[0]);
         return $race;
     }
@@ -21,8 +18,5 @@ class Client {
         return $race;
     }
 
-    private function toXMLObject (\Psr\Http\Message\ResponseInterface $response) {
-        return simplexml_load_string($response->getBody()->getContents());
-    }
 
 }
