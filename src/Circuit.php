@@ -14,7 +14,7 @@ class Circuit {
         return $this;
     }
 
-    public function fromXML(SimpleXMLElement $xml) {
+    public function fromXML(\SimpleXMLElement $xml) {
         $this->id = (string) $xml['circuitId'];
         $this->name = (string) $xml->CircuitName;
         $this->country = (string) $xml->Location->Country;

@@ -10,7 +10,7 @@ class Lap {
         }
     }
 
-    public function fromXML (SimpleXMLElement $xml) {
+    public function fromXML (\SimpleXMLElement $xml) {
         $this->number = (int) $xml['number'];
         $this->timings = array();
         foreach($xml->Timing as $timing) {

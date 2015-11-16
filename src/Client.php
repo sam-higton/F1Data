@@ -16,12 +16,12 @@ class Client {
         return $race;
     }
 
-    private function formatRace(SimpleXMLElement $raceXML) {
+    private function formatRace(\SimpleXMLElement $raceXML) {
         $race = new Race($raceXML);
         return $race;
     }
 
-    private function toXMLObject (Psr\Http\Message\ResponseInterface $response) {
+    private function toXMLObject (\Psr\Http\Message\ResponseInterface $response) {
         return simplexml_load_string($response->getBody()->getContents());
     }
 

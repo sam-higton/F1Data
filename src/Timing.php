@@ -12,7 +12,7 @@ class Timing {
         }
     }
 
-    public function fromXML (SimpleXMLElement $xml) {
+    public function fromXML (\SimpleXMLElement $xml) {
         $this->driver = (string) $xml['driverId'];
         $this->lap = (string) $xml['lap'];
         $this->position = (string) $xml['position'];
