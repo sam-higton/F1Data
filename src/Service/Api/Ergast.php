@@ -27,7 +27,7 @@ class Ergast implements ServiceInterface {
         $id = $params['id'];
         $result = $this->httpAdapter->get("drivers/" . $id);
         $driverMap = new \F1Data\Entity\Map\DriverMap();
-        $driverMap->fromXML($result);
+        $driverMap->fromXML($result->DriverTable->Driver);
         return $driverMap;
     }
 

@@ -11,14 +11,13 @@ class DriverMap implements MapInterface {
     private $permanentNumber;
 
     public function fromXML(\SimpleXMLElement $xml) {
-        $driverRoot = $xml->DriverTable->Driver;
-        $this->driverId = (string) $driverRoot['driverId'];
-        $this->givenName = (string) $driverRoot->GivenName;
-        $this->familyName = (string) $driverRoot->FamilyName;
-        $this->code = (string) $driverRoot['code'];
-        $this->dob = (string) $driverRoot->DateOfBirth;
-        $this->nationality = (string) $driverRoot->Nationality;
-        $this->permanentNumber = (string) $driverRoot->PermanentNumber;
+        $this->driverId = (string) $xml['driverId'];
+        $this->givenName = (string) $xml->GivenName;
+        $this->familyName = (string) $xml->FamilyName;
+        $this->code = (string) $xml['code'];
+        $this->dob = (string) $xml->DateOfBirth;
+        $this->nationality = (string) $xml->Nationality;
+        $this->permanentNumber = (string) $xml->PermanentNumber;
     }
 
     public function fromRow($row) {
