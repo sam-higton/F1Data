@@ -1,5 +1,6 @@
 <?php
-namespace F1Data\HttpAdapter;
+namespace F1Data\Adapter\Http;
+use F1Data\Adapter\AdapterInterface;
 use \Psr\Http\Message\ResponseInterface;
 use GuzzleHttp\Client;
 class GuzzleAdapter implements HttpAdapterInterface {
