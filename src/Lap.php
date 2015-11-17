@@ -18,6 +18,16 @@ class Lap {
         return $this->timings;
     }
 
+    public function getTimingAtPosition ($posNo) {
+        /** @var Timing $timing */
+        foreach($this->timings as $timing) {
+            if ($timing->getPosition() == $posNo) {
+                return $timing;
+            }
+        }
+        return false;
+    }
+
     public function getDriverData ($driverName) {
         /** @var Timing $timing */
         foreach($this->timings as $timing) {

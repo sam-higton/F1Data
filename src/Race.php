@@ -54,6 +54,16 @@ class Race {
         return false;
     }
 
+    public function getLapPositionData ($position, $lapNo) {
+        /** @var Lap $lap */
+        foreach($this->laps as $lap) {
+            if($lap->getNumber() == $lapNo) {
+                return $lap->getTimingAtPosition($position);
+            }
+        }
+        return false;
+    }
+
     /** @return Timing */
     public function getDriverGridPosition($driverName) {
         /** @var QualiResult $qualiResult */
@@ -81,7 +91,15 @@ class Race {
                 if($thisLapData) {
                     $positionDiff = $thisLapData->getPosition() - $lastLapPosition;
                     if($positionDiff < 0) {
-                        echo $driver . " overtakes " . -$positionDiff . " cars on lap " . $i . " <br />";
+//                            echo "last lap: " . $lastLapPosition . " this lap: " . $thisLapData->getPosition() . "<br />";
+                        for($j = $lastLapPosition; $j > $thisLapData->getPosition(); $j--) {
+                            $overtakeData = $this->getLapPositionData($j,$i);
+                            if($overtakeData) {
+                                echo $driver . " overtakes " . $overtakeData->getDriver() . " on lap " . $i . "<br />";
+                            } else {
+                                echo $driver . " gains position due to DNF<br />";
+                            }
+                        }
                     }
                     $driverList[$driver] = $thisLapData->getPosition();
                 }
