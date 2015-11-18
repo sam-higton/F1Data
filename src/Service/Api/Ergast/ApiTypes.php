@@ -9,6 +9,7 @@ class ApiTypes {
     public static $STANDING = "driverstandings";
     public static $FINISH_STATUS = "status";
     public static $RESULTS = "results";
+    public static $CIRCUITS = "circuits";
 
 
 
