@@ -4,6 +4,6 @@ use F1Data\Adapter\AdapterInterface;
 
 interface ServiceInterface {
 
-    public function setAdapter ($adapter);
+
 
 }

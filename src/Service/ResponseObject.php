@@ -4,7 +4,12 @@ class ResponseObject {
     private $entityName;
     private $fields;
 
-    public function __construct($fields = false) {
+    public function __construct($name = false, $fields = false) {
+
+        if($name) {
+            $this->entityName = $name;
+        }
+
         if($fields) {
             $this->addFields($fields);
         }
@@ -12,6 +17,10 @@ class ResponseObject {
 
     public function setEntityName($name) {
         $this->entityName = $name;
+    }
+
+    public function getEntityName() {
+        return $this->entityName;
     }
 
     public function addFields (array $fields) {

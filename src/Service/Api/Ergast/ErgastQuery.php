@@ -24,7 +24,7 @@ class ErgastQuery {
     }
 
     public function buildRequestURI () {
-        $baseURI = "/";
+        $baseURI = "";
         if($this->year) {
             $baseURI .= $this->year . "/";
         }
@@ -33,16 +33,13 @@ class ErgastQuery {
             $baseURI .= $this->year . "/";
         }
 
-        if($this->driver || $this->dataType == ApiTypes::$DRIVER) {
-            $baseURI .= ApiTypes::$DRIVER . '/' . $this->driver;
+        if($this->driver) {
+            $baseURI .= ApiTypes::$DRIVER . '/' . $this->driver . '/';
         }
 
-        if($this->dataType == ApiTypes::$DRIVER && !$this->driver) {
-            $baseURI .= ApiTypes::$DRIVER . '/';
-        }
-
-        if($this->dataType) {
-            $baseURI .= $this->dataType . '/';
+        if($this->dataType &&
+            !($this->dataType == ApiTypes::$DRIVER && $this->driver)) {
+            $baseURI .= $this->dataType;
         }
 
         return $baseURI;

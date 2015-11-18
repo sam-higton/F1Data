@@ -13,44 +13,18 @@ class Driver implements EntityInterface {
     private $nationality;
     private $dob;
     private $permanentNumber;
-    /** @var  \F1Data\Service\ServiceInterface $service */
-    private $service;
 
-    public function __construct($id = false) {
-        $service = \F1Data\Service\ServiceManager::getActiveService();
-        $this->setService($service);
-        if($id) {
-            $this->getDriver($id);
+    public function __construct($fields = false) {
+        if($fields) {
+            $this->fromArray($fields);
         }
     }
 
-    /**
-     * @param Service\ServiceInterface $service
-     * @return mixed
-     */
-    public function setService(Service\ServiceInterface $service) {
-        $this->service = $service;
-    }
-
-    /**
-     * @return mixed
-     */
     public function getEntityName() {
         return $this->entityName;
     }
 
-    public function getDriver($id) {
-        $response = $this->service->getEntity($this->entityName, array (
-            "id" => "maldonado"
-        ));
-        $this->hydrate($response);
-    }
-
-    /**
-     * @return mixed
-     */
-    public function hydrate(Map\MapInterface $map) {
-        $data = $map->toArray();
+    public function fromArray(array $data) {
         $this->driverId = $data['driverId'];
         $this->familyName = $data['familyName'];
         $this->givenName = $data['givenName'];
