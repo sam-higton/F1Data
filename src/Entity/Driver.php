@@ -14,14 +14,137 @@ class Driver implements EntityInterface {
     private $dob;
     private $permanentNumber;
 
+    /**
+     * @return mixed
+     */
+    public function getDriverId()
+    {
+        return $this->driverId;
+    }
+
+    /**
+     * @param mixed $driverId
+     * @return Driver
+     */
+    public function setDriverId($driverId)
+    {
+        $this->driverId = $driverId;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getGivenName()
+    {
+        return $this->givenName;
+    }
+
+    /**
+     * @param mixed $givenName
+     * @return Driver
+     */
+    public function setGivenName($givenName)
+    {
+        $this->givenName = $givenName;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getFamilyName()
+    {
+        return $this->familyName;
+    }
+
+    /**
+     * @param mixed $familyName
+     * @return Driver
+     */
+    public function setFamilyName($familyName)
+    {
+        $this->familyName = $familyName;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getCode()
+    {
+        return $this->code;
+    }
+
+    /**
+     * @param mixed $code
+     * @return Driver
+     */
+    public function setCode($code)
+    {
+        $this->code = $code;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getNationality()
+    {
+        return $this->nationality;
+    }
+
+    /**
+     * @param mixed $nationality
+     * @return Driver
+     */
+    public function setNationality($nationality)
+    {
+        $this->nationality = $nationality;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getDob()
+    {
+        return $this->dob;
+    }
+
+    /**
+     * @param mixed $dob
+     * @return Driver
+     */
+    public function setDob($dob)
+    {
+        $this->dob = $dob;
+        return $this;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPermanentNumber()
+    {
+        return $this->permanentNumber;
+    }
+
+    /**
+     * @param mixed $permanentNumber
+     * @return Driver
+     */
+    public function setPermanentNumber($permanentNumber)
+    {
+        $this->permanentNumber = $permanentNumber;
+        return $this;
+    }
+
+
     public function __construct($fields = false) {
         if($fields) {
             $this->fromArray($fields);
         }
-    }
-
-    public function getEntityName() {
-        return $this->entityName;
     }
 
     public function fromArray(array $data) {

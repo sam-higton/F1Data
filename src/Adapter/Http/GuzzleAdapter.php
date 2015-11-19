@@ -10,7 +10,9 @@ class GuzzleAdapter implements HttpAdapterInterface {
     private $cacheKey = "F1Data_";
 
     public function __construct($basePath = "http://ergast.com/api/f1/"){
-        session_start();
+        if (session_status() == PHP_SESSION_NONE) {
+            session_start();
+        }
         $this->client = new Client([
            "base_uri" => $basePath
         ]);
