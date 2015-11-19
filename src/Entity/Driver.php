@@ -140,6 +140,15 @@ class Driver implements EntityInterface {
         return $this;
     }
 
+    public function getFullName ($abbreviateGiven = false) {
+        if($abbreviateGiven) {
+            $given = $this->givenName[0];
+        } else {
+            $given = $this->givenName;
+        }
+
+        return $given . ' ' . $this->familyName;
+    }
 
     public function __construct($fields = false) {
         if($fields) {

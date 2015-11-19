@@ -5,17 +5,16 @@ use F1Data\Service\DriverServiceInterface;
 use F1Data\Service\ResponseCollection;
 use F1Data\Service\ResponseObject;
 
-class DriverCollection  {
+class DriverCollection extends BaseCollection {
 
     /** @var DriverServiceInterface $service  */
     private $service;
-    private $drivers = [];
 
     public function __construct($service = false) {
         if($service instanceof DriverServiceInterface) {
             $this->service = $service;
         } else {
-            //todo: implement autoloading
+            //todo: implement better bootstrapping with configs and stuff
             $this->service = new DriverService();
         }
     }
@@ -53,7 +52,7 @@ class DriverCollection  {
         if($object->getEntityName() == "Driver") {
             $newDriver = new Driver();
             $newDriver->fromArray($object->getFields());
-            $this->drivers[] = $newDriver;
+            $this->add($newDriver);
             return $newDriver;
         } else {
             return false;
