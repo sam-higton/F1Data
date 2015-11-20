@@ -25,6 +25,10 @@ class BaseCollection implements \Iterator {
         return $this->collection[$index];
     }
 
+    public function count () {
+        return count($this->collection);
+    }
+
     public function current() {
         return $this->collection[$this->position];
     }

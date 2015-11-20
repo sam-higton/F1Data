@@ -20,6 +20,24 @@ class DriverCollection extends BaseCollection {
     }
 
     public function getDriver ($id) {
+        if($driver = $this->findDriver($id)) {
+            return $driver;
+        } else {
+            return $this->fetchDriver($id);
+        }
+    }
+
+    public function findDriver ($id) {
+        /** @var Driver $driver */
+        foreach($this as $driver) {
+            if($driver->getDriverId() == $id) {
+                return $driver;
+            }
+        }
+        return false;
+    }
+
+    private function fetchDriver ($id) {
         $responseObject = $this->service->getDriver($id);
         return $this->processResponseObject($responseObject);
     }
@@ -39,7 +57,7 @@ class DriverCollection extends BaseCollection {
         if($collection->getCollectionName() == "DriverCollection") {
             foreach($collection->getCollection() as $object) {
                 if(!$this->processResponseObject($object)) {
-                    return false;
+                    //return false;
                 };
             }
             return $collection;

@@ -1,0 +1,682 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1447980606">
+  <project timestamp="1447980606">
+    <file name="C:\xampp\htdocs\f1-data\src/Adapter/AdapterInterface.php">
+      <metrics loc="4" ncloc="4" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <package name="F1Data\Adapter\Http">
+      <file name="C:\xampp\htdocs\f1-data\src/Adapter/Http/GuzzleAdapter.php">
+        <class name="GuzzleAdapter" namespace="F1Data\Adapter\Http">
+          <metrics methods="8" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="15" elements="29" coveredelements="19"/>
+        </class>
+        <line num="12" type="method" name="__construct" crap="2.15" count="4"/>
+        <line num="13" type="stmt" count="4"/>
+        <line num="14" type="stmt" count="0"/>
+        <line num="15" type="stmt" count="0"/>
+        <line num="16" type="stmt" count="4"/>
+        <line num="18" type="stmt" count="4"/>
+        <line num="19" type="stmt" count="4"/>
+        <line num="21" type="method" name="setBasePath" crap="2" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="25" type="method" name="get" crap="2.06" count="3"/>
+        <line num="26" type="stmt" count="3"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="3"/>
+        <line num="30" type="stmt" count="3"/>
+        <line num="31" type="stmt" count="3"/>
+        <line num="34" type="stmt" count="3"/>
+        <line num="35" type="stmt" count="3"/>
+        <line num="38" type="method" name="saveToCache" crap="1" count="3"/>
+        <line num="40" type="stmt" count="3"/>
+        <line num="41" type="stmt" count="3"/>
+        <line num="43" type="method" name="loadFromCache" crap="2" count="0"/>
+        <line num="44" type="stmt" count="0"/>
+        <line num="47" type="method" name="checkCache" crap="1" count="3"/>
+        <line num="48" type="stmt" count="3"/>
+        <line num="51" type="method" name="getBodyContents" crap="1" count="3"/>
+        <line num="52" type="stmt" count="3"/>
+        <line num="55" type="method" name="toXMLObject" crap="1" count="3"/>
+        <line num="56" type="stmt" count="3"/>
+        <metrics loc="58" ncloc="56" classes="1" methods="8" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="21" coveredstatements="15" elements="29" coveredelements="19"/>
+      </file>
+    </package>
+    <file name="C:\xampp\htdocs\f1-data\src/Adapter/Http/HttpAdapterInterface.php">
+      <metrics loc="8" ncloc="8" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <package name="F1Data\Entity">
+      <file name="C:\xampp\htdocs\f1-data\src/Entity/BaseCollection.php">
+        <class name="BaseCollection" namespace="F1Data\Entity">
+          <metrics methods="10" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="9" elements="26" coveredelements="15"/>
+        </class>
+        <line num="8" type="method" name="add" crap="1" count="4"/>
+        <line num="9" type="stmt" count="4"/>
+        <line num="10" type="stmt" count="4"/>
+        <line num="13" type="method" name="removeAt" crap="2" count="0"/>
+        <line num="14" type="stmt" count="0"/>
+        <line num="15" type="stmt" count="0"/>
+        <line num="16" type="stmt" count="0"/>
+        <line num="19" type="method" name="insertAt" crap="2" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="24" type="method" name="getItemAt" crap="2" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="28" type="method" name="count" crap="1" count="2"/>
+        <line num="29" type="stmt" count="2"/>
+        <line num="32" type="method" name="current" crap="1" count="3"/>
+        <line num="33" type="stmt" count="3"/>
+        <line num="36" type="method" name="next" crap="1" count="3"/>
+        <line num="37" type="stmt" count="3"/>
+        <line num="38" type="stmt" count="3"/>
+        <line num="40" type="method" name="key" crap="2" count="0"/>
+        <line num="41" type="stmt" count="0"/>
+        <line num="44" type="method" name="valid" crap="1" count="3"/>
+        <line num="45" type="stmt" count="3"/>
+        <line num="48" type="method" name="rewind" crap="1" count="3"/>
+        <line num="49" type="stmt" count="3"/>
+        <line num="50" type="stmt" count="3"/>
+        <metrics loc="51" ncloc="51" classes="1" methods="10" coveredmethods="6" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="9" elements="26" coveredelements="15"/>
+      </file>
+      <file name="C:\xampp\htdocs\f1-data\src/Entity/Driver.php">
+        <class name="Driver" namespace="F1Data\Entity">
+          <metrics methods="17" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="38" coveredstatements="13" elements="55" coveredelements="17"/>
+        </class>
+        <line num="20" type="method" name="getDriverId" crap="1" count="2"/>
+        <line num="22" type="stmt" count="2"/>
+        <line num="29" type="method" name="setDriverId" crap="2" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="38" type="method" name="getGivenName" crap="1" count="2"/>
+        <line num="40" type="stmt" count="2"/>
+        <line num="47" type="method" name="setGivenName" crap="2" count="0"/>
+        <line num="49" type="stmt" count="0"/>
+        <line num="50" type="stmt" count="0"/>
+        <line num="56" type="method" name="getFamilyName" crap="2" count="0"/>
+        <line num="58" type="stmt" count="0"/>
+        <line num="65" type="method" name="setFamilyName" crap="2" count="0"/>
+        <line num="67" type="stmt" count="0"/>
+        <line num="68" type="stmt" count="0"/>
+        <line num="74" type="method" name="getCode" crap="2" count="0"/>
+        <line num="76" type="stmt" count="0"/>
+        <line num="83" type="method" name="setCode" crap="2" count="0"/>
+        <line num="85" type="stmt" count="0"/>
+        <line num="86" type="stmt" count="0"/>
+        <line num="92" type="method" name="getNationality" crap="1" count="1"/>
+        <line num="94" type="stmt" count="1"/>
+        <line num="101" type="method" name="setNationality" crap="2" count="0"/>
+        <line num="103" type="stmt" count="0"/>
+        <line num="104" type="stmt" count="0"/>
+        <line num="110" type="method" name="getDob" crap="2" count="0"/>
+        <line num="112" type="stmt" count="0"/>
+        <line num="119" type="method" name="setDob" crap="2" count="0"/>
+        <line num="121" type="stmt" count="0"/>
+        <line num="122" type="stmt" count="0"/>
+        <line num="128" type="method" name="getPermanentNumber" crap="2" count="0"/>
+        <line num="130" type="stmt" count="0"/>
+        <line num="137" type="method" name="setPermanentNumber" crap="2" count="0"/>
+        <line num="139" type="stmt" count="0"/>
+        <line num="140" type="stmt" count="0"/>
+        <line num="143" type="method" name="getFullName" crap="6" count="0"/>
+        <line num="144" type="stmt" count="0"/>
+        <line num="145" type="stmt" count="0"/>
+        <line num="146" type="stmt" count="0"/>
+        <line num="147" type="stmt" count="0"/>
+        <line num="150" type="stmt" count="0"/>
+        <line num="153" type="method" name="__construct" crap="2.50" count="3"/>
+        <line num="154" type="stmt" count="3"/>
+        <line num="155" type="stmt" count="0"/>
+        <line num="156" type="stmt" count="0"/>
+        <line num="157" type="stmt" count="3"/>
+        <line num="159" type="method" name="fromArray" crap="1" count="3"/>
+        <line num="160" type="stmt" count="3"/>
+        <line num="161" type="stmt" count="3"/>
+        <line num="162" type="stmt" count="3"/>
+        <line num="163" type="stmt" count="3"/>
+        <line num="164" type="stmt" count="3"/>
+        <line num="165" type="stmt" count="3"/>
+        <line num="166" type="stmt" count="3"/>
+        <line num="167" type="stmt" count="3"/>
+        <metrics loc="168" ncloc="119" classes="1" methods="17" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="38" coveredstatements="13" elements="55" coveredelements="17"/>
+      </file>
+      <file name="C:\xampp\htdocs\f1-data\src/Entity/DriverCollection.php">
+        <class name="DriverCollection" namespace="F1Data\Entity">
+          <metrics methods="8" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="32" coveredstatements="27" elements="40" coveredelements="32"/>
+        </class>
+        <line num="13" type="method" name="__construct" crap="2.26" count="4"/>
+        <line num="14" type="stmt" count="4"/>
+        <line num="15" type="stmt" count="0"/>
+        <line num="16" type="stmt" count="0"/>
+        <line num="18" type="stmt" count="4"/>
+        <line num="20" type="stmt" count="4"/>
+        <line num="22" type="method" name="getDriver" crap="2" count="1"/>
+        <line num="23" type="stmt" count="1"/>
+        <line num="24" type="stmt" count="1"/>
+        <line num="26" type="stmt" count="1"/>
+        <line num="30" type="method" name="findDriver" crap="3" count="2"/>
+        <line num="32" type="stmt" count="2"/>
+        <line num="33" type="stmt" count="2"/>
+        <line num="34" type="stmt" count="2"/>
+        <line num="36" type="stmt" count="2"/>
+        <line num="37" type="stmt" count="2"/>
+        <line num="40" type="method" name="fetchDriver" crap="1" count="1"/>
+        <line num="41" type="stmt" count="1"/>
+        <line num="42" type="stmt" count="1"/>
+        <line num="45" type="method" name="getSeasonDrivers" crap="1" count="1"/>
+        <line num="46" type="stmt" count="1"/>
+        <line num="47" type="stmt" count="1"/>
+        <line num="51" type="method" name="getRoundDrivers" crap="1" count="1"/>
+        <line num="52" type="stmt" count="1"/>
+        <line num="53" type="stmt" count="1"/>
+        <line num="56" type="method" name="processResponseCollection" crap="4.37" count="2"/>
+        <line num="57" type="stmt" count="2"/>
+        <line num="58" type="stmt" count="2"/>
+        <line num="59" type="stmt" count="2"/>
+        <line num="60" type="stmt" count="0"/>
+        <line num="62" type="stmt" count="2"/>
+        <line num="63" type="stmt" count="2"/>
+        <line num="65" type="stmt" count="0"/>
+        <line num="69" type="method" name="processResponseObject" crap="2.02" count="3"/>
+        <line num="70" type="stmt" count="3"/>
+        <line num="71" type="stmt" count="3"/>
+        <line num="72" type="stmt" count="3"/>
+        <line num="73" type="stmt" count="3"/>
+        <line num="74" type="stmt" count="3"/>
+        <line num="76" type="stmt" count="0"/>
+        <metrics loc="79" ncloc="75" classes="1" methods="8" coveredmethods="5" conditionals="0" coveredconditionals="0" statements="32" coveredstatements="27" elements="40" coveredelements="32"/>
+      </file>
+    </package>
+    <package name="F1Data">
+      <file name="C:\xampp\htdocs\f1-data\src/Entity/Circuit.php">
+        <class name="Circuit" namespace="F1Data">
+          <metrics methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="0" elements="16" coveredelements="0"/>
+        </class>
+        <line num="10" type="method" name="__construct" crap="6" count="0"/>
+        <line num="11" type="stmt" count="0"/>
+        <line num="12" type="stmt" count="0"/>
+        <line num="13" type="stmt" count="0"/>
+        <line num="14" type="stmt" count="0"/>
+        <line num="15" type="stmt" count="0"/>
+        <line num="17" type="method" name="fromXML" crap="2" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="19" type="stmt" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="22" type="stmt" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="24" type="stmt" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <metrics loc="26" ncloc="26" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="0" elements="16" coveredelements="0"/>
+      </file>
+      <file name="C:\xampp\htdocs\f1-data\src/Entity/Lap.php">
+        <class name="Lap" namespace="F1Data">
+          <metrics methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="0" elements="34" coveredelements="0"/>
+        </class>
+        <line num="7" type="method" name="__construct" crap="6" count="0"/>
+        <line num="8" type="stmt" count="0"/>
+        <line num="9" type="stmt" count="0"/>
+        <line num="10" type="stmt" count="0"/>
+        <line num="11" type="stmt" count="0"/>
+        <line num="13" type="method" name="getNumber" crap="2" count="0"/>
+        <line num="14" type="stmt" count="0"/>
+        <line num="15" type="stmt" count="0"/>
+        <line num="17" type="method" name="getTimings" crap="2" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="19" type="stmt" count="0"/>
+        <line num="21" type="method" name="getTimingAtPosition" crap="12" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="24" type="stmt" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="31" type="method" name="getDriverData" crap="12" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="38" type="stmt" count="0"/>
+        <line num="39" type="stmt" count="0"/>
+        <line num="41" type="method" name="fromXML" crap="6" count="0"/>
+        <line num="42" type="stmt" count="0"/>
+        <line num="43" type="stmt" count="0"/>
+        <line num="44" type="stmt" count="0"/>
+        <line num="45" type="stmt" count="0"/>
+        <line num="46" type="stmt" count="0"/>
+        <line num="47" type="stmt" count="0"/>
+        <metrics loc="48" ncloc="46" classes="1" methods="6" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="28" coveredstatements="0" elements="34" coveredelements="0"/>
+      </file>
+      <file name="C:\xampp\htdocs\f1-data\src/Entity/Overtake.php">
+        <class name="Overtake" namespace="F1Data">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="9" ncloc="9" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="C:\xampp\htdocs\f1-data\src/Entity/PitStop.php">
+        <class name="PitStop" namespace="F1Data">
+          <metrics methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="12" coveredelements="0"/>
+        </class>
+        <line num="10" type="method" name="__construct" crap="6" count="0"/>
+        <line num="11" type="stmt" count="0"/>
+        <line num="12" type="stmt" count="0"/>
+        <line num="13" type="stmt" count="0"/>
+        <line num="14" type="stmt" count="0"/>
+        <line num="16" type="method" name="loadFromXML" crap="2" count="0"/>
+        <line num="17" type="stmt" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="19" type="stmt" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="22" type="stmt" count="0"/>
+        <metrics loc="23" ncloc="23" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="10" coveredstatements="0" elements="12" coveredelements="0"/>
+      </file>
+      <file name="C:\xampp\htdocs\f1-data\src/Entity/QualiResult.php">
+        <class name="QualiResult" namespace="F1Data">
+          <metrics methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="0" elements="22" coveredelements="0"/>
+        </class>
+        <line num="9" type="method" name="__construct" crap="6" count="0"/>
+        <line num="10" type="stmt" count="0"/>
+        <line num="11" type="stmt" count="0"/>
+        <line num="12" type="stmt" count="0"/>
+        <line num="13" type="stmt" count="0"/>
+        <line num="15" type="method" name="getDriver" crap="2" count="0"/>
+        <line num="16" type="stmt" count="0"/>
+        <line num="17" type="stmt" count="0"/>
+        <line num="19" type="method" name="getPosition" crap="2" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="23" type="method" name="loadFromXML" crap="12" count="0"/>
+        <line num="24" type="stmt" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <metrics loc="34" ncloc="34" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="18" coveredstatements="0" elements="22" coveredelements="0"/>
+      </file>
+      <file name="C:\xampp\htdocs\f1-data\src/Entity/Race.php">
+        <class name="Race" namespace="F1Data">
+          <metrics methods="8" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="70" coveredstatements="0" elements="78" coveredelements="0"/>
+        </class>
+        <line num="14" type="method" name="__construct" crap="6" count="0"/>
+        <line num="15" type="stmt" count="0"/>
+        <line num="16" type="stmt" count="0"/>
+        <line num="17" type="stmt" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="20" type="method" name="fromXML" crap="6" count="0"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="22" type="stmt" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="24" type="stmt" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="33" type="method" name="loadPitStopsFromXML" crap="6" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="38" type="stmt" count="0"/>
+        <line num="40" type="method" name="loadQualiFromXML" crap="6" count="0"/>
+        <line num="41" type="stmt" count="0"/>
+        <line num="42" type="stmt" count="0"/>
+        <line num="43" type="stmt" count="0"/>
+        <line num="44" type="stmt" count="0"/>
+        <line num="45" type="stmt" count="0"/>
+        <line num="47" type="method" name="getDriverLapData" crap="12" count="0"/>
+        <line num="49" type="stmt" count="0"/>
+        <line num="50" type="stmt" count="0"/>
+        <line num="51" type="stmt" count="0"/>
+        <line num="52" type="stmt" count="0"/>
+        <line num="53" type="stmt" count="0"/>
+        <line num="54" type="stmt" count="0"/>
+        <line num="55" type="stmt" count="0"/>
+        <line num="57" type="method" name="getLapPositionData" crap="12" count="0"/>
+        <line num="59" type="stmt" count="0"/>
+        <line num="60" type="stmt" count="0"/>
+        <line num="61" type="stmt" count="0"/>
+        <line num="62" type="stmt" count="0"/>
+        <line num="63" type="stmt" count="0"/>
+        <line num="64" type="stmt" count="0"/>
+        <line num="65" type="stmt" count="0"/>
+        <line num="68" type="method" name="getDriverGridPosition" crap="12" count="0"/>
+        <line num="70" type="stmt" count="0"/>
+        <line num="71" type="stmt" count="0"/>
+        <line num="72" type="stmt" count="0"/>
+        <line num="73" type="stmt" count="0"/>
+        <line num="74" type="stmt" count="0"/>
+        <line num="75" type="stmt" count="0"/>
+        <line num="76" type="stmt" count="0"/>
+        <line num="78" type="method" name="checkForOvertakes" crap="72" count="0"/>
+        <line num="79" type="stmt" count="0"/>
+        <line num="81" type="stmt" count="0"/>
+        <line num="82" type="stmt" count="0"/>
+        <line num="83" type="stmt" count="0"/>
+        <line num="86" type="stmt" count="0"/>
+        <line num="87" type="stmt" count="0"/>
+        <line num="88" type="stmt" count="0"/>
+        <line num="89" type="stmt" count="0"/>
+        <line num="91" type="stmt" count="0"/>
+        <line num="92" type="stmt" count="0"/>
+        <line num="93" type="stmt" count="0"/>
+        <line num="95" type="stmt" count="0"/>
+        <line num="96" type="stmt" count="0"/>
+        <line num="97" type="stmt" count="0"/>
+        <line num="98" type="stmt" count="0"/>
+        <line num="99" type="stmt" count="0"/>
+        <line num="100" type="stmt" count="0"/>
+        <line num="101" type="stmt" count="0"/>
+        <line num="102" type="stmt" count="0"/>
+        <line num="103" type="stmt" count="0"/>
+        <line num="104" type="stmt" count="0"/>
+        <line num="105" type="stmt" count="0"/>
+        <line num="106" type="stmt" count="0"/>
+        <line num="107" type="stmt" count="0"/>
+        <line num="108" type="stmt" count="0"/>
+        <metrics loc="109" ncloc="102" classes="1" methods="8" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="70" coveredstatements="0" elements="78" coveredelements="0"/>
+      </file>
+      <file name="C:\xampp\htdocs\f1-data\src/Entity/Season.php">
+        <class name="Season" namespace="F1Data">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="6" ncloc="6" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="C:\xampp\htdocs\f1-data\src/Entity/Timing.php">
+        <class name="Timing" namespace="F1Data">
+          <metrics methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="17" coveredelements="0"/>
+        </class>
+        <line num="9" type="method" name="__construct" crap="6" count="0"/>
+        <line num="10" type="stmt" count="0"/>
+        <line num="11" type="stmt" count="0"/>
+        <line num="12" type="stmt" count="0"/>
+        <line num="13" type="stmt" count="0"/>
+        <line num="15" type="method" name="getDriver" crap="2" count="0"/>
+        <line num="16" type="stmt" count="0"/>
+        <line num="17" type="stmt" count="0"/>
+        <line num="19" type="method" name="getPosition" crap="2" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="23" type="method" name="fromXML" crap="2" count="0"/>
+        <line num="24" type="stmt" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <metrics loc="28" ncloc="28" classes="1" methods="4" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="13" coveredstatements="0" elements="17" coveredelements="0"/>
+      </file>
+      <file name="C:\xampp\htdocs\f1-data\src/F1Data.php">
+        <class name="F1Data" namespace="F1Data">
+          <metrics methods="7" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="45" coveredstatements="0" elements="52" coveredelements="0"/>
+        </class>
+        <line num="8" type="method" name="init" crap="6" count="0"/>
+        <line num="9" type="stmt" count="0"/>
+        <line num="10" type="stmt" count="0"/>
+        <line num="11" type="stmt" count="0"/>
+        <line num="12" type="stmt" count="0"/>
+        <line num="13" type="stmt" count="0"/>
+        <line num="14" type="stmt" count="0"/>
+        <line num="16" type="method" name="loadDefaults" crap="2" count="0"/>
+        <line num="17" type="stmt" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="19" type="stmt" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="22" type="stmt" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="24" type="stmt" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="30" type="method" name="loadSettings" crap="2" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="33" type="method" name="setting" crap="12" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="35" type="stmt" count="0"/>
+        <line num="36" type="stmt" count="0"/>
+        <line num="37" type="stmt" count="0"/>
+        <line num="38" type="stmt" count="0"/>
+        <line num="39" type="stmt" count="0"/>
+        <line num="40" type="stmt" count="0"/>
+        <line num="41" type="stmt" count="0"/>
+        <line num="42" type="stmt" count="0"/>
+        <line num="43" type="stmt" count="0"/>
+        <line num="44" type="stmt" count="0"/>
+        <line num="45" type="method" name="applySetting" crap="2" count="0"/>
+        <line num="46" type="stmt" count="0"/>
+        <line num="47" type="stmt" count="0"/>
+        <line num="48" type="stmt" count="0"/>
+        <line num="49" type="method" name="fetchAllSettings" crap="2" count="0"/>
+        <line num="50" type="stmt" count="0"/>
+        <line num="51" type="stmt" count="0"/>
+        <line num="52" type="method" name="apply" crap="12" count="0"/>
+        <line num="53" type="stmt" count="0"/>
+        <line num="54" type="stmt" count="0"/>
+        <line num="55" type="stmt" count="0"/>
+        <line num="56" type="stmt" count="0"/>
+        <line num="57" type="stmt" count="0"/>
+        <line num="58" type="stmt" count="0"/>
+        <line num="59" type="stmt" count="0"/>
+        <line num="60" type="stmt" count="0"/>
+        <line num="61" type="stmt" count="0"/>
+        <line num="62" type="stmt" count="0"/>
+        <metrics loc="63" ncloc="63" classes="1" methods="7" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="45" coveredstatements="0" elements="52" coveredelements="0"/>
+      </file>
+    </package>
+    <file name="C:\xampp\htdocs\f1-data\src/Entity/EntityItnerface.php">
+      <metrics loc="6" ncloc="6" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <package name="F1Data\Service\Api\Ergast">
+      <file name="C:\xampp\htdocs\f1-data\src/Service/Api/Ergast/ApiTypes.php">
+        <class name="ApiTypes" namespace="F1Data\Service\Api\Ergast">
+          <metrics methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+        </class>
+        <metrics loc="18" ncloc="18" classes="1" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+      </file>
+      <file name="C:\xampp\htdocs\f1-data\src/Service/Api/Ergast/DriverService.php">
+        <class name="DriverService" namespace="F1Data\Service\Api\Ergast">
+          <metrics methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="30" coveredstatements="24" elements="35" coveredelements="28"/>
+        </class>
+        <line num="11" type="method" name="getDriver" crap="1" count="1"/>
+        <line num="12" type="stmt" count="1"/>
+        <line num="13" type="stmt" count="1"/>
+        <line num="14" type="stmt" count="1"/>
+        <line num="15" type="stmt" count="1"/>
+        <line num="16" type="stmt" count="1"/>
+        <line num="19" type="method" name="getSeasonDrivers" crap="1" count="2"/>
+        <line num="20" type="stmt" count="2"/>
+        <line num="21" type="stmt" count="2"/>
+        <line num="22" type="stmt" count="2"/>
+        <line num="23" type="stmt" count="2"/>
+        <line num="24" type="stmt" count="2"/>
+        <line num="28" type="method" name="getRoundDrivers" crap="2" count="0"/>
+        <line num="29" type="stmt" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="38" type="method" name="formatDriverCollection" crap="2" count="2"/>
+        <line num="39" type="stmt" count="2"/>
+        <line num="40" type="stmt" count="2"/>
+        <line num="41" type="stmt" count="2"/>
+        <line num="42" type="stmt" count="2"/>
+        <line num="43" type="stmt" count="2"/>
+        <line num="46" type="method" name="formatDriver" crap="1" count="3"/>
+        <line num="47" type="stmt" count="3"/>
+        <line num="48" type="stmt" count="3"/>
+        <line num="49" type="stmt" count="3"/>
+        <line num="50" type="stmt" count="3"/>
+        <line num="51" type="stmt" count="3"/>
+        <line num="52" type="stmt" count="3"/>
+        <line num="53" type="stmt" count="3"/>
+        <line num="54" type="stmt" count="3"/>
+        <line num="55" type="stmt" count="3"/>
+        <metrics loc="57" ncloc="57" classes="1" methods="5" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="30" coveredstatements="24" elements="35" coveredelements="28"/>
+      </file>
+      <file name="C:\xampp\htdocs\f1-data\src/Service/Api/Ergast/Ergast.php">
+        <class name="Ergast" namespace="F1Data\Service\Api\Ergast">
+          <metrics methods="3" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="6" elements="12" coveredelements="7"/>
+        </class>
+        <line num="14" type="method" name="__construct" crap="2.03" count="4"/>
+        <line num="15" type="stmt" count="4"/>
+        <line num="16" type="stmt" count="1"/>
+        <line num="17" type="stmt" count="0"/>
+        <line num="18" type="stmt" count="4"/>
+        <line num="20" type="stmt" count="4"/>
+        <line num="22" type="method" name="setAdapter" crap="2" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="24" type="stmt" count="0"/>
+        <line num="26" type="method" name="makeRequest" crap="1" count="3"/>
+        <line num="27" type="stmt" count="3"/>
+        <line num="28" type="stmt" count="3"/>
+        <metrics loc="31" ncloc="30" classes="1" methods="3" coveredmethods="1" conditionals="0" coveredconditionals="0" statements="9" coveredstatements="6" elements="12" coveredelements="7"/>
+      </file>
+      <file name="C:\xampp\htdocs\f1-data\src/Service/Api/Ergast/ErgastQuery.php">
+        <class name="ErgastQuery" namespace="F1Data\Service\Api\Ergast">
+          <metrics methods="5" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="19" elements="28" coveredelements="22"/>
+        </class>
+        <line num="10" type="method" name="specifyRound" crap="2" count="0"/>
+        <line num="11" type="stmt" count="0"/>
+        <line num="12" type="stmt" count="0"/>
+        <line num="14" type="method" name="specifyYear" crap="1" count="2"/>
+        <line num="15" type="stmt" count="2"/>
+        <line num="16" type="stmt" count="2"/>
+        <line num="18" type="method" name="specifyDriver" crap="1" count="1"/>
+        <line num="19" type="stmt" count="1"/>
+        <line num="20" type="stmt" count="1"/>
+        <line num="22" type="method" name="setDataType" crap="1" count="3"/>
+        <line num="23" type="stmt" count="3"/>
+        <line num="24" type="stmt" count="3"/>
+        <line num="26" type="method" name="buildRequestURI" crap="7.12" count="3"/>
+        <line num="27" type="stmt" count="3"/>
+        <line num="28" type="stmt" count="3"/>
+        <line num="29" type="stmt" count="2"/>
+        <line num="30" type="stmt" count="2"/>
+        <line num="32" type="stmt" count="3"/>
+        <line num="33" type="stmt" count="0"/>
+        <line num="34" type="stmt" count="0"/>
+        <line num="36" type="stmt" count="3"/>
+        <line num="37" type="stmt" count="1"/>
+        <line num="38" type="stmt" count="1"/>
+        <line num="40" type="stmt" count="3"/>
+        <line num="41" type="stmt" count="3"/>
+        <line num="42" type="stmt" count="2"/>
+        <line num="43" type="stmt" count="2"/>
+        <line num="45" type="stmt" count="3"/>
+        <metrics loc="50" ncloc="50" classes="1" methods="5" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="23" coveredstatements="19" elements="28" coveredelements="22"/>
+      </file>
+    </package>
+    <package name="F1Data\Service">
+      <file name="C:\xampp\htdocs\f1-data\src/Service/ResponseCollection.php">
+        <class name="ResponseCollection" namespace="F1Data\Service">
+          <metrics methods="6" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="9" elements="21" coveredelements="12"/>
+        </class>
+        <line num="8" type="method" name="__construct" crap="3.21" count="2"/>
+        <line num="9" type="stmt" count="2"/>
+        <line num="10" type="stmt" count="2"/>
+        <line num="11" type="stmt" count="2"/>
+        <line num="13" type="stmt" count="2"/>
+        <line num="14" type="stmt" count="0"/>
+        <line num="15" type="stmt" count="0"/>
+        <line num="16" type="stmt" count="2"/>
+        <line num="18" type="method" name="setCollectionName" crap="2" count="0"/>
+        <line num="19" type="stmt" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <line num="22" type="method" name="getCollectionName" crap="1" count="2"/>
+        <line num="23" type="stmt" count="2"/>
+        <line num="26" type="method" name="setCollection" crap="2" count="0"/>
+        <line num="27" type="stmt" count="0"/>
+        <line num="28" type="stmt" count="0"/>
+        <line num="30" type="method" name="addObject" crap="1" count="2"/>
+        <line num="31" type="stmt" count="2"/>
+        <line num="32" type="stmt" count="2"/>
+        <line num="34" type="method" name="getCollection" crap="1" count="2"/>
+        <line num="35" type="stmt" count="2"/>
+        <metrics loc="37" ncloc="37" classes="1" methods="6" coveredmethods="3" conditionals="0" coveredconditionals="0" statements="15" coveredstatements="9" elements="21" coveredelements="12"/>
+      </file>
+      <file name="C:\xampp\htdocs\f1-data\src/Service/ResponseObject.php">
+        <class name="ResponseObject" namespace="F1Data\Service">
+          <metrics methods="7" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="11" elements="23" coveredelements="15"/>
+        </class>
+        <line num="7" type="method" name="__construct" crap="3" count="3"/>
+        <line num="9" type="stmt" count="3"/>
+        <line num="10" type="stmt" count="3"/>
+        <line num="11" type="stmt" count="3"/>
+        <line num="13" type="stmt" count="3"/>
+        <line num="14" type="stmt" count="3"/>
+        <line num="15" type="stmt" count="3"/>
+        <line num="16" type="stmt" count="3"/>
+        <line num="18" type="method" name="setEntityName" crap="2" count="0"/>
+        <line num="19" type="stmt" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <line num="22" type="method" name="getEntityName" crap="1" count="3"/>
+        <line num="23" type="stmt" count="3"/>
+        <line num="26" type="method" name="addFields" crap="1" count="3"/>
+        <line num="27" type="stmt" count="3"/>
+        <line num="28" type="stmt" count="3"/>
+        <line num="30" type="method" name="addField" crap="2" count="0"/>
+        <line num="31" type="stmt" count="0"/>
+        <line num="32" type="stmt" count="0"/>
+        <line num="34" type="method" name="getFields" crap="1" count="3"/>
+        <line num="35" type="stmt" count="3"/>
+        <line num="38" type="method" name="getField" crap="2" count="0"/>
+        <line num="39" type="stmt" count="0"/>
+        <metrics loc="41" ncloc="41" classes="1" methods="7" coveredmethods="4" conditionals="0" coveredconditionals="0" statements="16" coveredstatements="11" elements="23" coveredelements="15"/>
+      </file>
+      <file name="C:\xampp\htdocs\f1-data\src/Service/ServiceManager.php">
+        <class name="ServiceManager" namespace="F1Data\Service">
+          <metrics methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="0" elements="16" coveredelements="0"/>
+        </class>
+        <line num="9" type="method" name="getActiveService" crap="6" count="0"/>
+        <line num="10" type="stmt" count="0"/>
+        <line num="12" type="stmt" count="0"/>
+        <line num="13" type="stmt" count="0"/>
+        <line num="14" type="stmt" count="0"/>
+        <line num="15" type="stmt" count="0"/>
+        <line num="16" type="stmt" count="0"/>
+        <line num="17" type="stmt" count="0"/>
+        <line num="18" type="stmt" count="0"/>
+        <line num="20" type="stmt" count="0"/>
+        <line num="21" type="stmt" count="0"/>
+        <line num="23" type="stmt" count="0"/>
+        <line num="25" type="stmt" count="0"/>
+        <line num="26" type="stmt" count="0"/>
+        <line num="28" type="method" name="getAdapter" crap="2" count="0"/>
+        <line num="30" type="stmt" count="0"/>
+        <metrics loc="32" ncloc="27" classes="1" methods="2" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="14" coveredstatements="0" elements="16" coveredelements="0"/>
+      </file>
+    </package>
+    <file name="C:\xampp\htdocs\f1-data\src/Service/ServiceInterface.php">
+      <metrics loc="8" ncloc="8" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="C:\xampp\htdocs\f1-data\src/Service/ServiceInterface/CircuitServiceInterface.php">
+      <metrics loc="6" ncloc="6" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="C:\xampp\htdocs\f1-data\src/Service/ServiceInterface/DriverServiceInterface.php">
+      <metrics loc="8" ncloc="7" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="C:\xampp\htdocs\f1-data\src/Service/ServiceInterface/LapServiceInterface.php">
+      <metrics loc="7" ncloc="7" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="C:\xampp\htdocs\f1-data\src/Service/ServiceInterface/PitStopServiceInterface.php">
+      <metrics loc="5" ncloc="5" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="C:\xampp\htdocs\f1-data\src/Service/ServiceInterface/QualiServiceInterface.php">
+      <metrics loc="5" ncloc="5" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <file name="C:\xampp\htdocs\f1-data\src/Service/ServiceInterface/RoundServiceInterface.php">
+      <metrics loc="5" ncloc="5" classes="0" methods="0" coveredmethods="0" conditionals="0" coveredconditionals="0" statements="0" coveredstatements="0" elements="0" coveredelements="0"/>
+    </file>
+    <metrics files="30" loc="1030" ncloc="959" classes="20" methods="104" coveredmethods="34" conditionals="0" coveredconditionals="0" statements="412" coveredstatements="133" elements="516" coveredelements="167"/>
+  </project>
+</coverage>
