@@ -33,7 +33,7 @@ class Round implements EntityInterface {
      * @return mixed
      */
     public function getSeason() {
-        return $this->season;
+        return $this->year;
     }
 
     /**
@@ -75,7 +75,17 @@ class Round implements EntityInterface {
      * @return mixed
      */
     public function getDrivers() {
+        if(!$this->drivers instanceof DriverCollection) {
+            $this->fetchDrivers();
+        }
         return $this->drivers;
+    }
+
+    public function fetchDrivers () {
+        $drivers = new DriverCollection();
+        $drivers->getRoundDrivers($this->year, $this->roundNo);
+        $this->drivers = $drivers;
+        return $this;
     }
 
     /**
