@@ -30,7 +30,7 @@ class ErgastQuery {
         }
 
         if($this->round) {
-            $baseURI .= $this->year . "/";
+            $baseURI .= $this->round . "/";
         }
 
         if($this->driver) {

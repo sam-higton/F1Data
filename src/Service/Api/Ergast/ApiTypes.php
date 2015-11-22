@@ -10,7 +10,7 @@ class ApiTypes {
     public static $FINISH_STATUS = "status";
     public static $RESULTS = "results";
     public static $CIRCUITS = "circuits";
-
+    public static $ROUND = false;
 
 
     private function __construct() {}
