@@ -1,6 +1,6 @@
 <?php
 namespace F1Data\Entity;
-class BaseCollection implements \Iterator {
+class BaseCollection implements \Iterator, \Countable {
 
     private $collection = [];
     private $position = 0;
