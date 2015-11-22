@@ -1,6 +1,8 @@
 <?php
-namespace F1Data;
-class Timing {
+namespace F1Data\Entity;
+use F1Data\EntityInterface;
+
+class Timing implements EntityInterface{
     private $driver;
     private $lap;
     private $position;
@@ -20,10 +22,10 @@ class Timing {
         return $this->position;
     }
 
-    public function fromXML (\SimpleXMLElement $xml) {
-        $this->driver = (string) $xml['driverId'];
-        $this->lap = (string) $xml['lap'];
-        $this->position = (string) $xml['position'];
-        $this->time = (string) $xml['time'];
+    public function fromArray (array $data) {
+        $this->driver = (string) $data['driver'];
+        $this->lap = (string) $data['lap'];
+        $this->position = (string) $data['position'];
+        $this->time = (string) $data['time'];
     }
 }

@@ -54,7 +54,18 @@ class Round implements EntityInterface {
      * @return mixed
      */
     public function getLaps() {
+        if(!$this->laps instanceof LapCollection) {
+            $this->fetchLaps();
+        }
+
         return $this->laps;
+    }
+
+    public function fetchLaps () {
+        $lapCollection = new LapCollection();
+        $lapCollection->getRoundLaps($this->year, $this->roundNo);
+        $this->laps = $lapCollection;
+        return $this;
     }
 
     /**
@@ -101,7 +112,7 @@ class Round implements EntityInterface {
         $this->dateTime = $data['date'] . ' ' . $data['time'];
         $this->roundNo = $data['roundNo'];
         $this->year = $data['year'];
-        $circuitData = $data['circuit']->getFields();
+        $circuitData = $data['circuit'];
         $circuit = new Circuit();
         $circuit->fromArray($circuitData);
         $this->circuit = $circuit;

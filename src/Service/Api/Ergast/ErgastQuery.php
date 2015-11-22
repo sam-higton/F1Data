@@ -6,6 +6,8 @@ class ErgastQuery {
     private $year = false;
     private $round = false;
     private $driver = false;
+    private $limit = 10000;
+    private $offset = 0;
 
     public function specifyRound ($roundNo) {
         $this->round = $roundNo;
@@ -41,6 +43,8 @@ class ErgastQuery {
             !($this->dataType == ApiTypes::$DRIVER && $this->driver)) {
             $baseURI .= $this->dataType;
         }
+
+        $baseURI .= "?limit=" . $this->limit . '&offset=' . $this->offset;
 
         return $baseURI;
     }

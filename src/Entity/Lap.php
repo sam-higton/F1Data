@@ -1,14 +1,10 @@
 <?php
-namespace F1Data;
-class Lap {
+namespace F1Data\Entity;
+use F1Data\EntityInterface;
+class Lap implements EntityInterface {
     private $number;
+    /** @var  TimingCollection $timings */
     private $timings;
-
-    public function __construct($xml = false) {
-        if($xml) {
-            $this->fromXML($xml);
-        }
-    }
 
     public function getNumber () {
         return $this->number;
@@ -18,31 +14,11 @@ class Lap {
         return $this->timings;
     }
 
-    public function getTimingAtPosition ($posNo) {
-        /** @var Timing $timing */
-        foreach($this->timings as $timing) {
-            if ($timing->getPosition() == $posNo) {
-                return $timing;
-            }
-        }
-        return false;
+    public function fromArray (array $data) {
+        $this->number = $data['number'];
+        $timings = new TimingCollection();
+        $timings->fromArray($data['timings']);
+        $this->timings = $timings;
     }
 
-    public function getDriverData ($driverName) {
-        /** @var Timing $timing */
-        foreach($this->timings as $timing) {
-            if($timing->getDriver() == $driverName) {
-                return $timing;
-            }
-        }
-        return false;
-    }
-
-    public function fromXML (\SimpleXMLElement $xml) {
-        $this->number = (int) $xml['number'];
-        $this->timings = array();
-        foreach($xml->Timing as $timing) {
-            $this->timings[] = new Timing($timing);
-        }
-    }
 }

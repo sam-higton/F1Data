@@ -26,6 +26,7 @@ class RoundCollection extends BaseCollection {
     public function processResponseObject(ResponseObject $object) {
 
         $fields = $object->getFields();
+        $fields['circuit'] = $fields['circuit']->getFields();
         $round = new Round();
         $round->fromArray($fields);
         $this->add($round);
