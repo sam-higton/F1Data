@@ -1,7 +1,12 @@
 <?php
 namespace F1Data;
-class Season {
+class Season implements EntityInterface {
     private $series;
     private $year;
-    private $races;
+    private $rounds;
+
+    function fromArray(array $data) {
+
+    }
+
 }
